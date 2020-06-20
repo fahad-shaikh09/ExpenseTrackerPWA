@@ -1,4 +1,4 @@
-const myReducer = (state, action) => {
+const MyReducer = (state, action) => {
     switch(action.type){
         case "ADD": {
             return [action.payload, ...state]
@@ -8,4 +8,4 @@ const myReducer = (state, action) => {
     }
 }
 
-export default myReducer;
+export default MyReducer;

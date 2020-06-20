@@ -8,7 +8,7 @@ import AddIncome from './Components/AddIncome';
 import AddExpense from './Components/AddExpense';
 import ShowIncome from "./Components/ShowIncome";
 import ShowExpense from "./Components/ShowExpense";
-import { MyProvider } from '../src/incomeContext';
+import { MyProvider } from '../src/GlobalContext';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <AddExpense />
         </div>
         <br />
-        < hr />
+        <hr />
         <div className={"ShowEI"}>
           <ShowIncome />
           <ShowExpense />  
