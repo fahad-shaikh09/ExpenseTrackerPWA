@@ -9,14 +9,17 @@ const ShowIncome = () => {
   //   {text: "Salary2", amount: 2000},
   // ]
 
-  console.log(transactions)
+let incomeTransactions = transactions.filter(transaction => transaction.amount > 0 )
+
+  
+
   return (
   
       <div >
        
         <h3 className={"ShowIncome"} >SHOW INCOME:</h3>
         <ul className={"IncomeUL"}>
-            {transactions.map((transaction, ind) => 
+            {incomeTransactions.map((transaction, ind) => 
             
             (<li className={"transactions"} key={ind} >  
             
