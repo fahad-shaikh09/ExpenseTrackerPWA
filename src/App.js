@@ -1,25 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Balance from './Components/Balance';
+import IncomeTotal from './Components/IncomeTotal';
+import ExpenseTotal from "./Components/ExpenseTotal";
+import AddIncome from './Components/AddIncome';
+// import ShowTransaction from './Components/ShowTransaction';
+import AddExpense from './Components/AddExpense';
+import ShowIncome from "./Components/ShowIncome";
+import ShowExpense from "./Components/ShowExpense";
+import { MyProvider } from '../src/incomeContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyProvider>
+      
+        <h1>Expense Tracker App by Fahad Shaikh</h1>
+        <Balance />
+
+        <div className={"IncomeExpenseTotal"}> 
+          <IncomeTotal />
+          <ExpenseTotal />
+        </div>
+
+        <div className={"incomeExpense"}>
+          <AddIncome />
+          <AddExpense />
+        </div>
+        <br />
+        < hr />
+        <div className={"ShowEI"}>
+          <ShowIncome />
+          <ShowExpense />  
+        </div>
+
+        {/* <ShowTransaction /> */}
+    </MyProvider>
   );
 }
 
