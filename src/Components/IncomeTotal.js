@@ -5,7 +5,9 @@ import {GlobalContext} from "../../src/GlobalContext"
 
 const IncomeTotal = () => {
   
-  let [transactions,setTransactions] = useContext(GlobalContext);
+  let [transactions] = useContext(GlobalContext);
+  // let [transactions,setTransactions] = useContext(GlobalContext);
+
 
   // transactions.map(transaction => console.log("Transactions from income total: " + transaction.amount)) 
   let totalIncome = 0;

@@ -2,11 +2,11 @@ import React, {useContext} from 'react'
 import {GlobalContext} from "../../src/GlobalContext"
 
 
-
-
 const Balance = () => {
 
-let [transactions,setTransactions] = useContext(GlobalContext);
+let [transactions] = useContext(GlobalContext);
+// let [transactions,setTransactions] = useContext(GlobalContext);
+
 ///////////////INCOME////////////////////////
 // transactions.map(transaction => console.log("Transactions from income total: " + transaction.amount)) 
 let totalIncome = 0;

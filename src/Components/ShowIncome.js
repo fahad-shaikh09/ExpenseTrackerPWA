@@ -3,8 +3,10 @@ import { GlobalContext } from "../GlobalContext";
 
 const ShowIncome = () => {
 
-let [transactions,setTransactions] = useContext(GlobalContext);
-  // console.log("showincome component " + transactions)
+let [transactions] = useContext(GlobalContext);
+// let [transactions,setTransactions] = useContext(GlobalContext);
+
+
 let incomeTransactions = transactions.filter(transaction => transaction.amount > 0 )
   return (
   

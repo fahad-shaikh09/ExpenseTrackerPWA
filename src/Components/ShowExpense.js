@@ -3,7 +3,8 @@ import { GlobalContext } from "../GlobalContext";
 
 const ShowExpense = () => {
 
-const [transactions,setTransactions] = useContext(GlobalContext);
+const [transactions] = useContext(GlobalContext);
+// const [transactions,setTransactions] = useContext(GlobalContext);
 
 
 let expenseTransactions = transactions.filter(transaction => transaction.amount < 0 )

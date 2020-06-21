@@ -1,5 +1,6 @@
-import React, { createContext, useReducer,useState } from "react";
-import MyReducer from "./Reducer";
+import React, { createContext, useState } from "react";
+// import {useReducer} from "react";
+// import MyReducer from "./Reducer";
 
 export const GlobalContext = createContext();
 
@@ -17,7 +18,7 @@ export const MyProvider = ( props ) => {
 
   // transactions.map(transaction => console.log(transaction) )
 
-  let [state,dispatch] = useReducer(MyReducer, transactions);
+  // let [state,dispatch] = useReducer(MyReducer, transactions);
   // function addIncome(transObj){
   //     dispatch({        
   //       type: "ADD",

@@ -5,7 +5,8 @@ import {GlobalContext} from "../../src/GlobalContext"
 
 const ExpenseTotal = () => {
 
-  let [transactions,setTransactions] = useContext(GlobalContext);
+  let [transactions] = useContext(GlobalContext);
+  // let [transactions,setTransactions] = useContext(GlobalContext);
 
   let totalExpense = 0;
 
