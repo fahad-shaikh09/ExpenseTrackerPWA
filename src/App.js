@@ -15,7 +15,7 @@ function App() {
   return (
     <MyProvider>
       
-        <h1>Expense Tracker App by Fahad Shaikh</h1>
+        <h1>Expense Tracker App by Fahad Shaikh: CNC006590 </h1>
         <Balance />
 
         <div className={"IncomeExpenseTotal"}> 
