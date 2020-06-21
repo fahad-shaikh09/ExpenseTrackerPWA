@@ -19,6 +19,7 @@ const AddExpense = () => {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter Description"
+                required
         />
        <br />
        <br />
@@ -27,6 +28,7 @@ const AddExpense = () => {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
                 placeholder="Enter Amount"
+                required
         />
         
         <br />

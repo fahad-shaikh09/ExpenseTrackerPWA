@@ -3,16 +3,9 @@ import { GlobalContext } from "../GlobalContext";
 
 const ShowIncome = () => {
 
-  const [transactions,setTransactions] = useContext(GlobalContext);
-  // const transactions = [
-  //   {text: "Salary1", amount: 800},
-  //   {text: "Salary2", amount: 2000},
-  // ]
-
+let [transactions,setTransactions] = useContext(GlobalContext);
+  // console.log("showincome component " + transactions)
 let incomeTransactions = transactions.filter(transaction => transaction.amount > 0 )
-
-  
-
   return (
   
       <div >
@@ -28,12 +21,7 @@ let incomeTransactions = transactions.filter(transaction => transaction.amount >
             
             </li>))}
         </ul>
-
-
-
-    </div>
-      
-    
+    </div> 
   )
 }
 
