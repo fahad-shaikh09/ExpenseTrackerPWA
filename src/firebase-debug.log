@@ -1,0 +1,25 @@
+[debug] [2020-08-04T05:54:56.228Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T05:54:56.231Z] Command:       /usr/bin/node /usr/bin/firebase init
+[debug] [2020-08-04T05:54:56.231Z] CLI Version:   8.5.0
+[debug] [2020-08-04T05:54:56.231Z] Platform:      linux
+[debug] [2020-08-04T05:54:56.231Z] Node Version:  v14.7.0
+[debug] [2020-08-04T05:54:56.232Z] Time:          Tue Aug 04 2020 10:54:56 GMT+0500 (Pakistan Standard Time)
+[debug] [2020-08-04T05:54:56.232Z] ----------------------------------------------------------------------
+[debug] [2020-08-04T05:54:56.232Z] 
+[debug] [2020-08-04T05:54:56.237Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-04T05:54:56.238Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Data/Bootcamp/Expense-tracker-PWA/src
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
