@@ -23,3 +23,33 @@ Before we get started, keep in mind:
 
   * You are currently outside your home directory
 
+[debug] [2020-08-04T08:35:45.475Z] TypeError: Cannot read property 'setRawMode' of null
+    at ReadStream.setRawMode (tty.js:75:28)
+    at Interface._setRawMode (readline.js:298:16)
+    at Interface.close (readline.js:421:10)
+    at ReadStream.ontermend (readline.js:209:10)
+    at ReadStream.emit (events.js:326:22)
+    at ReadStream.EventEmitter.emit (domain.js:486:12)
+    at endReadableNT (_stream_readable.js:1244:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-08-04T08:35:45.482Z] Error: write EIO
+    at afterWriteDispatched (internal/stream_base_commons.js:156:25)
+    at writeGeneric (internal/stream_base_commons.js:147:3)
+    at WriteStream.Socket._writeGeneric (net.js:785:11)
+    at WriteStream.Socket._write (net.js:797:8)
+    at writeOrBuffer (_stream_writable.js:352:12)
+    at WriteStream.Writable.write (_stream_writable.js:303:10)
+    at Console.log (/usr/lib/node_modules/firebase-tools/node_modules/winston/lib/winston/transports/console.js:79:23)
+    at Console._write (/usr/lib/node_modules/firebase-tools/node_modules/winston-transport/index.js:103:17)
+    at doWrite (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_writable.js:428:64)
+    at writeOrBuffer (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_writable.js:417:5)
+    at Console.Writable.write (/usr/lib/node_modules/firebase-tools/node_modules/readable-stream/lib/_stream_writable.js:334:11)
+    at DerivedLogger.ondata (/usr/lib/node_modules/firebase-tools/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:681:20)
+    at DerivedLogger.emit (events.js:326:22)
+    at DerivedLogger.EventEmitter.emit (domain.js:486:12)
+    at addChunk (/usr/lib/node_modules/firebase-tools/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:298:12)
+    at readableAddChunk (/usr/lib/node_modules/firebase-tools/node_modules/winston/node_modules/readable-stream/lib/_stream_readable.js:280:11)
+[error] 
+[error] Error: An unexpected error has occurred.

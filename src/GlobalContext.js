@@ -1,37 +1,40 @@
-import React, { createContext, useState } from "react";
-// import {useReducer} from "react";
-// import MyReducer from "./Reducer";
+import React, { createContext, useReducer } from "react";
+import MyReducer from "./Reducer";
 
-export const GlobalContext = createContext();
+const initialState = {
+  transactions: [
+    { text: "Salary", amount: 500 },
+    { text: "Bill", amount: -100 }
+  ]
+}
+
+
+export const GlobalContext = createContext(initialState);
 
 
 export const MyProvider = ( props ) => {
 
-  let [transactions,setTransactions] = useState([
-    {text: "Salary1", amount: 800},
-    {text: "Salary2", amount: 2000},
-    {text: "Book 1", amount: -900},
-    {text: "Book 2", amount: -1000},
-    {text: "Book 3", amount: -3000},
-    {text: "Salary 3", amount: 1000}
-  ])
+  const [state, dispatch] = useReducer(MyReducer, initialState)
+  
+  
+  function addIncome(transaction) {
+    dispatch({
+      type: 'ADD_INCOME',
+      payload: transaction
+    });
+  }
 
-  // transactions.map(transaction => console.log(transaction) )
-
-  // let [state,dispatch] = useReducer(MyReducer, transactions);
-  // function addIncome(transObj){
-  //     dispatch({        
-  //       type: "ADD",
-  //       payload: {
-  //         text: transObj.text,
-  //         amount: transObj.amount,
-  //       },
-  //     }
-  //   )
-  // }
+  function addExpense(transaction) {
+    dispatch({
+      type: 'ADD_EXPENSE',
+      payload: transaction
+    });
+  }
     return (
       <GlobalContext.Provider value={
-         [transactions,setTransactions]    
+         {transactions: state.transactions,
+          addIncome,
+          addExpense}
           }
       > 
           {props.children}

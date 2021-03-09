@@ -15,7 +15,7 @@ function App() {
   return (
     <MyProvider>
         
-        <h1>Expense Tracker App by Fahad Shaikh: CNC006590 </h1>
+        <h1>Expense Tracker - PWA  </h1>
         <button onClick={requestPermission}>Generate Token for Push Notifications</button>
         <Balance />
 

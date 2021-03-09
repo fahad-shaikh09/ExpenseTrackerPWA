@@ -5,16 +5,15 @@ import {GlobalContext} from "../../src/GlobalContext"
 
 const ExpenseTotal = () => {
 
-  let [transactions] = useContext(GlobalContext);
-  // let [transactions,setTransactions] = useContext(GlobalContext);
+  let {transactions} = useContext(GlobalContext);
 
-  let totalExpense = 0;
 
-  totalExpense = transactions.filter(transaction => transaction.amount < 0 )
-  // console.log("Total Expense: " + totalExpense)
-  let newTotal = totalExpense.map(x => x.amount )
+  var totalExpense = transactions.filter(transaction => transaction.amount <= 0 )
+  console.log("totalExpense: " + totalExpense)
+
+  var newTotal = totalExpense.map(x => x.amount )
   // console.log(newTotal)
-  let grandTotalExpense = newTotal.reduce( (a,b) => {
+  var grandTotalExpense = newTotal.reduce((a,b) => {
     return a+b}
   )
 

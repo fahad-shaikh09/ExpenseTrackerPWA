@@ -4,28 +4,28 @@ import {GlobalContext} from "../../src/GlobalContext"
 
 const Balance = () => {
 
-let [transactions] = useContext(GlobalContext);
+let {transactions} = useContext(GlobalContext);
+
 // let [transactions,setTransactions] = useContext(GlobalContext);
+console.log("transactions in Balance.js >>>>>>>>>>.:", transactions)
+
 
 ///////////////INCOME////////////////////////
 // transactions.map(transaction => console.log("Transactions from income total: " + transaction.amount)) 
-let totalIncome = 0;
-  
-totalIncome = transactions.filter(transaction => transaction.amount > 0 )
+
+let totalIncome = transactions.filter(transaction => transaction.amount > 0 )
 // console.log("Total income: " + totalIncome)
 let newTotalIncome = totalIncome.map(x => x.amount )
 // console.log(newTotal)
-let grandTotalIncome = newTotalIncome.reduce( (a,b) => {
+let grandTotalIncome = newTotalIncome.reduce((a,b) => {
   return a+b}
 )
 ///////////////EXPENSE////////////////////////
-let totalExpense = 0;
-
-  totalExpense = transactions.filter(transaction => transaction.amount < 0 )
+let totalExpense  = transactions.filter(transaction => transaction.amount < 0 )
   // console.log("Total Expense: " + totalExpense)
   let newTotalExpense = totalExpense.map(x => x.amount )
   // console.log(newTotal)
-  let grandTotalExpense = newTotalExpense.reduce( (a,b) => {
+  let grandTotalExpense = newTotalExpense.reduce((a,b) => {
     return a+b}
   )
 

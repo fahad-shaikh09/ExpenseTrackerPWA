@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import {GlobalContext} from "./../GlobalContext"
 
 
 const AddExpense = () => {
   const [text,setText] = useState("");
   const [amount,setAmount] = useState(0);
   
+
+  let {transactions} = useContext(GlobalContext);
+  console.log("transactions in AddExpense >>>>>>>>: ", transactions)
+
+  const { addExpense } = useContext(GlobalContext);
+
   let submitForm = (e) => {
         e.preventDefault();
+        addExpense({text:text, amount: parseInt(amount)})
   }
 
     return (
     <div className={"addExpense"}>
       <h2 > ADD EXPENSE</h2>
 
-      <form onSubmit={submitForm} >
+      <form>
         <label>Enter Text</label> <br />
         <input type="text"
                 value={text}
@@ -26,14 +34,14 @@ const AddExpense = () => {
        <label>Enter Amount</label> <br />
         <input type="number"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                placeholder="Enter Amount"
+                onChange={(e) => e.target.value < 0 ? setAmount(e.target.value) : alert("Enter -ve amount for Expense")}
+                placeholder="Enter -ve Amount"
                 required
         />
         
         <br />
         <br />
-        <input  type="button" value="ADD EXPENSE" />
+         <button onClick={(e)=> submitForm(e)}> ADD EXPENSE</button>     
 
       </form>
 

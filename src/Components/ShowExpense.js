@@ -3,19 +3,21 @@ import { GlobalContext } from "../GlobalContext";
 
 const ShowExpense = () => {
 
-const [transactions] = useContext(GlobalContext);
+let {transactions} = useContext(GlobalContext);
+
 // const [transactions,setTransactions] = useContext(GlobalContext);
 
 
 let expenseTransactions = transactions.filter(transaction => transaction.amount < 0 )
+// console.log("expenseTransactions in ShowExpense >>>>>>>>>>>> : ", expenseTransactions)
   return (
     <div >
       <h3 className={"ShowExpense"}>SHOW EXPENSE:</h3>
 
       <ul className={"IncomeUL"}>
-            {expenseTransactions.map((transaction, ind) => (<li className={"transactions"} key={ind}>  
-            <span> {transaction.text}  </span> 
-            <span>{transaction.amount} </span> 
+            {expenseTransactions.map((item, ind) => (<li className={"transactions"} key={ind}>  
+            <span> {item.text}  </span> 
+            <span>{item.amount} </span> 
             </li>))}
       </ul>
     </div>
